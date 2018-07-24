@@ -2,11 +2,13 @@ const path = require('path');
 const webpack = require('webpack');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 const env = process.env.NODE_ENV;
 const isDev = env !== 'production';
 
 module.exports = {
+  devtool: !isDev && 'source-map',
   entry: './src/index.js',
   output: {
     filename: 'bundle.js',
@@ -26,7 +28,8 @@ module.exports = {
     }),
     new webpack.DefinePlugin({
       isDev: JSON.stringify(isDev)
-    })
+    }),
+    new CleanWebpackPlugin(path.resolve(__dirname, 'dist'), {})
   ],
   module: {
     rules: [
