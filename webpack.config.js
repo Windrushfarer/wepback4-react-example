@@ -19,6 +19,11 @@ module.exports = {
       isDev: JSON.stringify(isDev)
     })
   ],
+  plugins: [ // добавляем новое поле plugins
+    new MiniCssExtractPlugin({
+      filename: "style.css"
+    })
+  ],
   module: {
     rules: [
       {
