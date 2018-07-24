@@ -5,9 +5,6 @@ import twitterSvg from '!svg-inline-loader!./icons/twitter.svg';
 
 require('./Footer.css');
 
-const fbSvg = require('!svg-inline-loader!./icons/fb.svg');
-const twitterSvg = require('!svg-inline-loader!./icons/twitter.svg');
-
 export default class Footer extends React.PureComponent {
   render() {
     return (
