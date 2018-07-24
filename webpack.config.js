@@ -1,5 +1,9 @@
 const path = require('path');
+const webpack = require('webpack');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
+const env = process.env.NODE_ENV;
+const isDev = env !== 'production';
 
 module.exports = {
   entry: './src/index.js',
@@ -7,9 +11,12 @@ module.exports = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
   },
-  plugins: [ // добавляем новое поле plugins
+  plugins: [
     new MiniCssExtractPlugin({
-      filename: "style.css"
+      filename: isDev ? 'style.css' : 'style.[hash].css'
+    }),
+    new webpack.DefinePlugin({
+      isDev: JSON.stringify(isDev)
     })
   ],
   module: {

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Webpack example config",
   "scripts": {
-    "build": "webpack --mode development"
+    "build": "NODE_ENV=development webpack --mode development"
   },
   "author": "Windrushfarer",
   "license": "ISC",

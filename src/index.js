@@ -28,7 +28,7 @@ class App extends React.PureComponent {
   render() {
     return (
       <div className='App'>
-        <h1 className='App__title'>Блог крутого разработчика</h1>
+        <h1 className='App__title'>{isDev ? 'Блог в разработке' : 'Блог крутого разработчика'}</h1>
         {posts.map(post => <Post key={post.id} title={post.title} text={post.text} />)}
         <Footer />
       </div>
