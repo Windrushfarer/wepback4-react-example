@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const env = process.env.NODE_ENV;
 const isDev = env !== 'production';
@@ -12,12 +13,16 @@ module.exports = {
     path: path.resolve(__dirname, 'dist')
   },
   plugins: [
-      new MiniCssExtractPlugin({
-        filename: isDev ? 'style.css' : 'style.[hash].css'
-      }),
-      new webpack.DefinePlugin({
-        isDev: JSON.stringify(isDev)
-      })
+    new MiniCssExtractPlugin({
+      filename: isDev ? 'style.[hash].css' : 'style.css'
+    }),
+    new HtmlWebpackPlugin({
+      template: './index.html',
+      filename: 'index.html'
+    }),
+    new webpack.DefinePlugin({
+      isDev: JSON.stringify(isDev)
+    })
   ],
   module: {
     rules: [
