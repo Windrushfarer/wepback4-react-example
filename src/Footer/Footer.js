@@ -1,6 +1,6 @@
 import React from "react";
 
-// require('./Footer.css');
+require('./Footer.css');
 
 export default class Footer extends React.PureComponent {
   render() {

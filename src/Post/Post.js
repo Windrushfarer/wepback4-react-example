@@ -1,6 +1,6 @@
 import React from "react";
 
-// require('./Post.css');
+require('./Post.css');
 
 export default class Post extends React.PureComponent {
   constructor(props) {

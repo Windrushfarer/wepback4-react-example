@@ -4,7 +4,7 @@ import ReactDOM from "react-dom";
 import Post from './Post/Post';
 import Footer from './Footer/Footer';
 
-// require('./index.css');
+require('./index.css');
 
 const posts = [{
   id: 1,
@@ -19,7 +19,7 @@ const posts = [{
   title: 'Почему JavaScript - это круто?',
   text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe excepturi harum error, quos eveniet ipsa maiores autem magni. Fugiat suscipit debitis earum doloremque incidunt recusandae quo accusantium cumque nisi nam.'
 }, {
-  id: 3,
+  id: 4,
   title: 'Почему программирование - это круто?',
   text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe excepturi harum error, quos eveniet ipsa maiores autem magni. Fugiat suscipit debitis earum doloremque incidunt recusandae quo accusantium cumque nisi nam.'
 }];
