@@ -12,17 +12,12 @@ module.exports = {
     path: path.resolve(__dirname, 'dist')
   },
   plugins: [
-    new MiniCssExtractPlugin({
-      filename: isDev ? 'style.css' : 'style.[hash].css'
-    }),
-    new webpack.DefinePlugin({
-      isDev: JSON.stringify(isDev)
-    })
-  ],
-  plugins: [ // добавляем новое поле plugins
-    new MiniCssExtractPlugin({
-      filename: "style.css"
-    })
+      new MiniCssExtractPlugin({
+        filename: isDev ? 'style.css' : 'style.[hash].css'
+      }),
+      new webpack.DefinePlugin({
+        isDev: JSON.stringify(isDev)
+      })
   ],
   module: {
     rules: [
