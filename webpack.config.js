@@ -20,6 +20,10 @@ module.exports = {
       template: './index.html',
       filename: 'index.html'
     }),
+    new HtmlWebpackPlugin({
+      template: './index.html',
+      filename: 'index.html'
+    }),
     new webpack.DefinePlugin({
       isDev: JSON.stringify(isDev)
     })
