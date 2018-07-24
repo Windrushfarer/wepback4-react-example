@@ -4,7 +4,7 @@ import ReactDOM from "react-dom";
 import Post from './Post/Post';
 import Footer from './Footer/Footer';
 
-// require('./index.css');
+require('./index.css');
 
 const posts = [{
   id: 1,
